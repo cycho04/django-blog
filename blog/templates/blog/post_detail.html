@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<h2>{{ object.title }}</h2>
+<img class='rounded-circle' src='{{object.author.profile.image.url}}'>
+<p>Author: {{ object.author }}</p>
+<p>{{ object.content }}</p>
+<p>Posted: {{ object.date_posted|date:"F d, Y" }}</p>
+{% if object.author == user %}
+<a class='btn btn-secondary btn-sm mt-1 mb-1' href='{% url "post-update" object.id %}'>Update</a>
+<a class='btn btn-danger btn-sm mt-1 mb-1' href='{% url "post-delete" object.id %}'>Delete</a>
+{% endif %}
+
+
+{% endblock content %}

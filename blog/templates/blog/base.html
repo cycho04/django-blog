@@ -39,6 +39,9 @@
         <div class='nav-item'>
           <a class="nav-link" href="{% url 'profile' %}" tabindex="-1" aria-disabled="true">Profile</a>
         </div>
+        <div class='nav-item'>
+          <a class="nav-link" href="{% url 'post-create' %}" tabindex="-1" aria-disabled="true">Create</a>
+        </div>
         {% else %}
         <div class="nav-item">
           <a class="nav-link" href="{% url 'login' %}" tabindex="-1" aria-disabled="true">Login</a>
