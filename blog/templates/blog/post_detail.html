@@ -4,7 +4,7 @@
 
 <h2>{{ object.title }}</h2>
 <img class='rounded-circle' src='{{object.author.profile.image.url}}'>
-<p>Author: {{ object.author }}</p>
+<a href='{% url "user-posts" object.author.username %}'>Author: {{ object.author }}</a>
 <p>{{ object.content }}</p>
 <p>Posted: {{ object.date_posted|date:"F d, Y" }}</p>
 {% if object.author == user %}
