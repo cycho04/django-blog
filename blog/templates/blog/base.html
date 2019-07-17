@@ -29,9 +29,6 @@
         <div class="nav-item active">
           <a class="nav-link" href="{% url 'blog-home' %}">Home <span class="sr-only">(current)</span></a>
         </div>
-        <div class="nav-item">
-          <a class="nav-link" href="{% url 'blog-about' %}">About</a>
-        </div>
         {% if user.is_authenticated %}
         <div class="nav-item">
           <a class="nav-link" href="{% url 'logout' %}" tabindex="-1" aria-disabled="true">Logout</a>
