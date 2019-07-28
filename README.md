@@ -1,3 +1,3 @@
 # django-blog
 
-Remake into reddit clone
+Remake into washington post
